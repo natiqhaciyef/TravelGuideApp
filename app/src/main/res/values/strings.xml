@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TravelGuideApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_the_username_text">Enter the User Name</string>
+    <string name="enter_the_email_text">Enter the email</string>
+    <string name="enter_the_password_text">Enter the password</string>
+
+    <string name="have_an_account_text"><![CDATA[Do you have an account ? <font color=#F84D4D>Login</font>]]></string>
+    <string name="register_text">Register</string>
+    <string name="registration_text">Registration</string>
+    <string name="login_text">Login</string>
+    <string name="forgot_password_text">Forgot password ?</string>
+    <string name="create_account_text"><![CDATA[You have not an account ? <font color=#F84D4D>Create Account</font>]]></string>
+    <string name="reset_password_text">Reset Password</string>
+    <string name="send_text">Send</string>
+    <string name="reset_password_description">Please enter your email and wait a minute. Check your inbox. If email doesn\'t show then check spam box</string>
+
+</resources>

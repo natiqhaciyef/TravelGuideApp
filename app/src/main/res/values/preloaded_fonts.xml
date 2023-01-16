@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/lobster</item>
+        <item>@font/prompt_bold</item>
+        <item>@font/prompt_extrabold</item>
+        <item>@font/prompt_medium</item>
+        <item>@font/prompt_thin</item>
+    </array>
+</resources>
