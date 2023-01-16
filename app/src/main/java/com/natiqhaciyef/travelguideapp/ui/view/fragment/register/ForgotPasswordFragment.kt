@@ -12,7 +12,9 @@ import com.google.firebase.ktx.Firebase
 import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.databinding.AlertSuccesfullRegistrationBinding
 import com.natiqhaciyef.travelguideapp.databinding.FragmentForgotPasswordBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ForgotPasswordFragment : Fragment() {
     private lateinit var binding: FragmentForgotPasswordBinding
     private lateinit var auth: FirebaseAuth

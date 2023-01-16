@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.databinding.FragmentTrainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class TrainFragment : Fragment() {
     private lateinit var binding: FragmentTrainBinding
 

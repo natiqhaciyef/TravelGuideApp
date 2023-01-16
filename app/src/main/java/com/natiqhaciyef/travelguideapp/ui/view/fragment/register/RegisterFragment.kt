@@ -17,8 +17,9 @@ import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.data.switchHtmlToXML
 import com.natiqhaciyef.travelguideapp.databinding.AlertSuccesfullRegistrationBinding
 import com.natiqhaciyef.travelguideapp.databinding.FragmentRegisterBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class RegisterFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
     private lateinit var auth: FirebaseAuth
@@ -77,6 +78,7 @@ class RegisterFragment : Fragment() {
         if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
             auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
                 createAlertDialogSuccessMessage(true)
+
             }.addOnFailureListener {
                 createAlertDialogSuccessMessage(false)
             }

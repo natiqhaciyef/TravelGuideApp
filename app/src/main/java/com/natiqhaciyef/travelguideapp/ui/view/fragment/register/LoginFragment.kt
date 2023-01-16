@@ -16,8 +16,9 @@ import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.data.switchHtmlToXML
 import com.natiqhaciyef.travelguideapp.databinding.AlertSuccesfullRegistrationBinding
 import com.natiqhaciyef.travelguideapp.databinding.FragmentLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
     private lateinit var auth: FirebaseAuth

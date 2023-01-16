@@ -12,8 +12,10 @@ import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.data.model.PostModel
 import com.natiqhaciyef.travelguideapp.databinding.FragmentHomeBinding
 import com.natiqhaciyef.travelguideapp.ui.adapter.HomePostAdapter
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.UUID
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var adapter: HomePostAdapter

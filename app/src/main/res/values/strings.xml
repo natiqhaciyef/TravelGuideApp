@@ -15,5 +15,10 @@
     <string name="reset_password_text">Reset Password</string>
     <string name="send_text">Send</string>
     <string name="reset_password_description">Please enter your email and wait a minute. Check your inbox. If email doesn\'t show then check spam box</string>
+    <string name="flight_text">Flight</string>
+    <string name="explore_destination_text">Explore Destination</string>
+    <string name="car_text">Car</string>
+    <string name="hotel_text">Hotel</string>
+    <string name="train_text">Train</string>
 
 </resources>
