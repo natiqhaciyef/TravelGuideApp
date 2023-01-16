@@ -1,5 +1,6 @@
 package com.natiqhaciyef.travelguideapp.ui.view.fragment.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
@@ -9,20 +10,25 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AlertDialogLayout
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.natiqhaciyef.travelguideapp.R
+import com.natiqhaciyef.travelguideapp.data.model.User
 import com.natiqhaciyef.travelguideapp.data.switchHtmlToXML
 import com.natiqhaciyef.travelguideapp.databinding.AlertSuccesfullRegistrationBinding
 import com.natiqhaciyef.travelguideapp.databinding.FragmentRegisterBinding
+import com.natiqhaciyef.travelguideapp.ui.view.activity.MainActivity
+import com.natiqhaciyef.travelguideapp.ui.viewmodel.register.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class RegisterFragment : Fragment() {
     private lateinit var binding: FragmentRegisterBinding
     private lateinit var auth: FirebaseAuth
+    private val viewModel: RegisterViewModel by viewModels()
     private var visibility = true
 
     override fun onCreateView(
@@ -36,6 +42,10 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = Firebase.auth
+        if (auth.currentUser != null)
+            goToHome()
+
+
         binding.goToLogin.switchHtmlToXML(R.string.have_an_account_text, requireContext())
         binding.passwordVisibile.setOnClickListener {
             visibility = !visibility
@@ -78,7 +88,8 @@ class RegisterFragment : Fragment() {
         if (username.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
             auth.createUserWithEmailAndPassword(email, password).addOnSuccessListener {
                 createAlertDialogSuccessMessage(true)
-
+                viewModel.addUser(User(id = 0, name = username, email = email))
+                goToHome()
             }.addOnFailureListener {
                 createAlertDialogSuccessMessage(false)
             }
@@ -96,5 +107,11 @@ class RegisterFragment : Fragment() {
             .setView(view.root)
             .create()
         customAlertDialog.show()
+    }
+
+    private fun goToHome(){
+        val intent = Intent(requireActivity(), MainActivity::class.java)
+        requireActivity().startActivity(intent)
+        requireActivity().finish()
     }
 }

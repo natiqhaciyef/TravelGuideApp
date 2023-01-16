@@ -1,5 +1,6 @@
 package com.natiqhaciyef.travelguideapp.ui.view.fragment.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
@@ -16,6 +17,7 @@ import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.data.switchHtmlToXML
 import com.natiqhaciyef.travelguideapp.databinding.AlertSuccesfullRegistrationBinding
 import com.natiqhaciyef.travelguideapp.databinding.FragmentLoginBinding
+import com.natiqhaciyef.travelguideapp.ui.view.activity.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -80,6 +82,7 @@ class LoginFragment : Fragment() {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
                 createAlertDialogSuccessMessage(true)
+                goToHome()
             }.addOnFailureListener {
                 createAlertDialogSuccessMessage(false)
             }
@@ -97,5 +100,11 @@ class LoginFragment : Fragment() {
             .setView(view.root)
             .create()
         customAlertDialog.show()
+    }
+
+    private fun goToHome(){
+        val intent = Intent(requireActivity(), MainActivity::class.java)
+        requireActivity().startActivity(intent)
+        requireActivity().finish()
     }
 }
