@@ -20,5 +20,11 @@
     <string name="car_text">Car</string>
     <string name="hotel_text">Hotel</string>
     <string name="train_text">Train</string>
+    <string name="search_flight_text">Search flight</string>
+    <string name="passenger_text">Passenger</string>
+    <string name="return_text">Return</string>
+    <string name="departure_text">Departure</string>
+    <string name="destination_text">Destination</string>
+    <string name="location_text">Location</string>
 
 </resources>

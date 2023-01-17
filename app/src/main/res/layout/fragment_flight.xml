@@ -10,304 +10,341 @@
             type="com.natiqhaciyef.travelguideapp.ui.view.fragment.flightscreen.FlightFragment" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/home_background_reversed"
-        tools:context=".ui.view.fragment.flightscreen.FlightFragment">
+        android:layout_height="match_parent">
 
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/half_world" />
-
-        <ImageView
-            android:id="@+id/imageView2"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/background_image_flight" />
+            android:background="@drawable/home_background_reversed"
+            tools:context=".ui.view.fragment.flightscreen.FlightFragment">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginHorizontal="25dp"
-            android:layout_marginTop="85dp"
-            android:layout_marginBottom="25dp"
-            app:cardCornerRadius="25dp"
-            app:layout_constraintBottom_toBottomOf="@id/imageView3"
-            app:layout_constraintEnd_toEndOf="@id/imageView3"
-            app:layout_constraintStart_toStartOf="@id/imageView3"
-            app:layout_constraintTop_toTopOf="@id/imageView3">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/imageView5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/app_main_color_light_ultra_extra"
-                >
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/half_world" />
 
-                <TextView
-                    android:id="@+id/locationTitle"
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/background_image_flight" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="25dp"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintBottom_toBottomOf="@id/imageView3"
+                app:layout_constraintEnd_toEndOf="@id/imageView3"
+                app:layout_constraintStart_toStartOf="@id/imageView3"
+                app:layout_constraintTop_toTopOf="@id/imageView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/prompt_bold"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="Location"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
+                    android:layout_height="match_parent"
+                    android:background="@color/app_main_color_light_ultra_extra">
 
-                <EditText
-                    android:id="@+id/locationTextFlight"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="5dp"
-                    android:hint="Your location"
-                    android:paddingStart="15dp"
-                    android:textSize="16sp"
-                    android:inputType="text"
-                    android:textColor="@color/black"
-                    android:backgroundTint="@color/app_main_color_light_extra_part2"
-                    android:background="@drawable/custom_flight_input_bar"
-                    app:layout_constraintTop_toBottomOf="@id/locationTitle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    />
+                    <TextView
+                        android:id="@+id/locationTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/prompt_bold"
+                        android:text="@string/location_text"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-
-                <TextView
-                    android:id="@+id/destinationTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/prompt_bold"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:text="Destination"
-                    app:layout_constraintTop_toBottomOf="@id/locationTextFlight"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
-
-                <EditText
-                    android:id="@+id/destinationTextFlight"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="5dp"
-                    android:hint="Your destination"
-                    android:paddingStart="15dp"
-                    android:textSize="16sp"
-                    android:inputType="text"
-                    android:textColor="@color/black"
-                    android:backgroundTint="@color/app_main_color_light_extra_part2"
-                    android:background="@drawable/custom_flight_input_bar"
-                    app:layout_constraintTop_toBottomOf="@id/destinationTitle"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    />
+                    <EditText
+                        android:id="@+id/locationTextFlight"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/custom_flight_input_bar"
+                        android:backgroundTint="@color/app_main_color_light_extra_part2"
+                        android:hint="Your location"
+                        android:inputType="text"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/locationTitle"
+                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
-                <TextView
-                    android:id="@+id/departureTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/prompt_bold"
-                    android:text="Departure"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.017"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/destinationTextFlight" />
+                    <TextView
+                        android:id="@+id/destinationTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/prompt_bold"
+                        android:text="@string/destination_text"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/locationTextFlight" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/departureDateTextFlight"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/custom_flight_input_bar"
-                    android:backgroundTint="@color/app_main_color_light_extra_part2"
-                    android:text="22/01/2022"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.005"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/departureTitle" />
-
-
-                <TextView
-                    android:id="@+id/returnTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/prompt_bold"
-                    android:text="Return"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.711"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/destinationTextFlight" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/returnDateTextFlight"
-                    android:layout_width="130dp"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/custom_flight_input_bar"
-                    android:backgroundTint="@color/app_main_color_light_extra_part2"
-                    android:text="22/01/2022"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.971"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/departureTitle" />
+                    <EditText
+                        android:id="@+id/destinationTextFlight"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/custom_flight_input_bar"
+                        android:backgroundTint="@color/app_main_color_light_extra_part2"
+                        android:hint="Your destination"
+                        android:inputType="text"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/destinationTitle"
+                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/searchFlightButton"
-                    android:layout_width="160dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="10dp"
-                    android:textAllCaps="false"
-                    android:text="Search flight"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:background="@drawable/custom_flight_button_bar"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/departureDateTextFlight" />
+                    <TextView
+                        android:id="@+id/departureTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/prompt_bold"
+                        android:text="@string/departure_text"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.017"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/destinationTextFlight" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageView2"
-            app:srcCompat="@drawable/flight_card_background" />
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/reverseTripButton"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:background="@drawable/custom_flight_button_bar"
-            android:text="         Round trip"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/cardView"
-            app:layout_constraintEnd_toStartOf="@+id/oneWayButton"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.44" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/departureDateTextFlight"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/custom_flight_input_bar"
+                        android:backgroundTint="@color/app_main_color_light_extra_part2"
+                        android:text="22/01/2022"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.005"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/departureTitle"
+                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
-        <ImageView
-            android:id="@+id/reverseBackground"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/reverseTripButton"
-            app:layout_constraintEnd_toEndOf="@+id/reverseTripButton"
-            app:layout_constraintHorizontal_bias="0.075"
-            app:layout_constraintStart_toStartOf="@+id/reverseTripButton"
-            app:layout_constraintTop_toTopOf="@+id/reverseTripButton"
-            app:layout_constraintVertical_bias="0.75"
-            app:srcCompat="@drawable/flight_circle_bar" />
+                    <TextView
+                        android:id="@+id/returnTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/prompt_bold"
+                        android:text="@string/return_text"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.711"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/destinationTextFlight" />
 
-        <ImageView
-            android:id="@+id/reverseIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/reverseBackground"
-            app:layout_constraintEnd_toEndOf="@+id/reverseBackground"
-            app:layout_constraintHorizontal_bias="0.37"
-            app:layout_constraintStart_toStartOf="@+id/reverseBackground"
-            app:layout_constraintTop_toTopOf="@+id/reverseBackground"
-            app:layout_constraintVertical_bias="0.42"
-            app:srcCompat="@drawable/reverse_icon" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/returnDateTextFlight"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/custom_flight_input_bar"
+                        android:backgroundTint="@color/app_main_color_light_extra_part2"
+                        android:text="22/01/2022"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.971"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/departureTitle"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/passengerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/prompt_bold"
+                        android:text="@string/passenger_text"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/returnDateTextFlight" />
+
+                    <EditText
+                        android:id="@+id/passengerTextFlight"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/custom_flight_input_bar"
+                        android:backgroundTint="@color/app_main_color_light_extra_part2"
+                        android:hint="1 Passenger"
+                        android:inputType="number"
+                        android:paddingStart="15dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/passengerTitle"
+                        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/oneWayButton"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:background="@drawable/custom_flight_button_bar"
-            android:text="        One way"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/cardView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/reverseTripButton"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="0.44" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/searchFlightButton"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/custom_flight_button_bar"
+                        android:text="@string/search_flight_text"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/passengerTextFlight" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView2"
+                app:srcCompat="@drawable/flight_card_background" />
 
 
-        <ImageView
-            android:id="@+id/oneWayBackground"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/oneWayButton"
-            app:layout_constraintEnd_toEndOf="@+id/oneWayButton"
-            app:layout_constraintHorizontal_bias="0.075"
-            app:layout_constraintStart_toStartOf="@+id/oneWayButton"
-            app:layout_constraintTop_toTopOf="@+id/oneWayButton"
-            app:layout_constraintVertical_bias="0.75"
-            app:srcCompat="@drawable/flight_circle_bar" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reverseTripButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_flight_button_bar"
+                android:text="         Round trip"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toStartOf="@+id/oneWayButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintVertical_bias="0.44" />
 
-        <ImageView
-            android:id="@+id/oneWayIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/oneWayBackground"
-            app:layout_constraintEnd_toEndOf="@+id/oneWayBackground"
-            app:layout_constraintHorizontal_bias="0.37"
-            app:layout_constraintStart_toStartOf="@+id/oneWayBackground"
-            app:layout_constraintTop_toTopOf="@+id/oneWayBackground"
-            app:layout_constraintVertical_bias="0.42"
-            app:srcCompat="@drawable/right_arrow_icon" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/reverseBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/reverseTripButton"
+                app:layout_constraintEnd_toEndOf="@+id/reverseTripButton"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="@+id/reverseTripButton"
+                app:layout_constraintTop_toTopOf="@+id/reverseTripButton"
+                app:layout_constraintVertical_bias="0.75"
+                app:srcCompat="@drawable/flight_circle_bar" />
+
+            <ImageView
+                android:id="@+id/reverseIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/reverseBackground"
+                app:layout_constraintEnd_toEndOf="@+id/reverseBackground"
+                app:layout_constraintHorizontal_bias="0.37"
+                app:layout_constraintStart_toStartOf="@+id/reverseBackground"
+                app:layout_constraintTop_toTopOf="@+id/reverseBackground"
+                app:layout_constraintVertical_bias="0.42"
+                app:srcCompat="@drawable/reverse_icon" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/oneWayButton"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_flight_button_bar"
+                android:text="        One way"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cardView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/reverseTripButton"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintVertical_bias="0.44" />
+
+
+            <ImageView
+                android:id="@+id/oneWayBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/oneWayButton"
+                app:layout_constraintEnd_toEndOf="@+id/oneWayButton"
+                app:layout_constraintHorizontal_bias="0.075"
+                app:layout_constraintStart_toStartOf="@+id/oneWayButton"
+                app:layout_constraintTop_toTopOf="@+id/oneWayButton"
+                app:layout_constraintVertical_bias="0.75"
+                app:srcCompat="@drawable/flight_circle_bar" />
+
+            <ImageView
+                android:id="@+id/oneWayIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/oneWayBackground"
+                app:layout_constraintEnd_toEndOf="@+id/oneWayBackground"
+                app:layout_constraintHorizontal_bias="0.37"
+                app:layout_constraintStart_toStartOf="@+id/oneWayBackground"
+                app:layout_constraintTop_toTopOf="@+id/oneWayBackground"
+                app:layout_constraintVertical_bias="0.42"
+                app:srcCompat="@drawable/right_arrow_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 </layout>

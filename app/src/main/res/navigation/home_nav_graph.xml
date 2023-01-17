@@ -4,42 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav_graph"
     app:startDestination="@id/homeFragment">
-
-    <fragment
-        android:id="@+id/detailsFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.home.DetailsFragment"
-        android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
-    <fragment
-        android:id="@+id/hotelFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.hotelscreen.HotelFragment"
-        android:label="fragment_hotel"
-        tools:layout="@layout/fragment_hotel" />
-    <fragment
-        android:id="@+id/carFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.carscreen.CarFragment"
-        android:label="fragment_car"
-        tools:layout="@layout/fragment_car" />
-    <fragment
-        android:id="@+id/flightFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.flightscreen.FlightFragment"
-        android:label="fragment_flight"
-        tools:layout="@layout/fragment_flight" />
-    <fragment
-        android:id="@+id/trainFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.trainscreen.TrainFragment"
-        android:label="fragment_train"
-        tools:layout="@layout/fragment_train" />
-    <fragment
-        android:id="@+id/userFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.userscreen.UserFragment"
-        android:label="fragment_user"
-        tools:layout="@layout/fragment_user" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.home.HomeFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.homescreen.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
         <action
             android:id="@+id/action_homeFragment_to_trainFragment"
             app:destination="@id/trainFragment" />
@@ -52,11 +24,25 @@
         <action
             android:id="@+id/action_homeFragment_to_hotelFragment"
             app:destination="@id/hotelFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_userFragment"
-            app:destination="@id/userFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/flightFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.flightscreen.FlightFragment"
+        android:label="FlightFragment" />
+    <fragment
+        android:id="@+id/hotelFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.hotelscreen.HotelFragment"
+        android:label="HotelFragment" />
+    <fragment
+        android:id="@+id/carFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.carscreen.CarFragment"
+        android:label="CarFragment" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.homescreen.DetailsFragment"
+        android:label="DetailsFragment" />
+    <fragment
+        android:id="@+id/trainFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.trainscreen.TrainFragment"
+        android:label="TrainFragment" />
 </navigation>
