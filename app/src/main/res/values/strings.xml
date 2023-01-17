@@ -26,5 +26,6 @@
     <string name="departure_text">Departure</string>
     <string name="destination_text">Destination</string>
     <string name="location_text">Location</string>
+    <string name="result_text">Result</string>
 
 </resources>

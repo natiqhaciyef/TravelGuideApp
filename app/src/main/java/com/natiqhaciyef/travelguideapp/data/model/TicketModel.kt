@@ -12,6 +12,9 @@ data class TicketModel(
     @ColumnInfo(name = "location") var location: String,
     @ColumnInfo(name = "destination") var destination: String,
     @ColumnInfo(name = "price") var price: String,
+    @ColumnInfo(name = "depTime") var depTime: String = "",
+    @ColumnInfo(name = "retTime") var retTime: String = "",
+    @ColumnInfo(name = "timeline") var timeline: String = "",
     @ColumnInfo(name = "departureDate") var departureDate: String, // gedis
     @ColumnInfo(name = "returnDate") var returnDate: String,    // gelis
     @ColumnInfo(name = "passenger") var passenger: String,
