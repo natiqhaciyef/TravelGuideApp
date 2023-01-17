@@ -7,37 +7,37 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.DetailsFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.home.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/hotelFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.HotelFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.hotelscreen.HotelFragment"
         android:label="fragment_hotel"
         tools:layout="@layout/fragment_hotel" />
     <fragment
         android:id="@+id/carFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.CarFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.carscreen.CarFragment"
         android:label="fragment_car"
         tools:layout="@layout/fragment_car" />
     <fragment
         android:id="@+id/flightFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.FlightFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.flightscreen.FlightFragment"
         android:label="fragment_flight"
         tools:layout="@layout/fragment_flight" />
     <fragment
         android:id="@+id/trainFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.TrainFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.trainscreen.TrainFragment"
         android:label="fragment_train"
         tools:layout="@layout/fragment_train" />
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.UserFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.userscreen.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.HomeFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action

@@ -5,13 +5,13 @@
     <data>
         <variable
             name="carFragment"
-            type="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.CarFragment" />
+            type="com.natiqhaciyef.travelguideapp.ui.view.fragment.carscreen.CarFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.view.fragment.home.CarFragment">
+        tools:context=".ui.view.fragment.carscreen.CarFragment">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

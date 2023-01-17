@@ -1,4 +1,4 @@
-package com.natiqhaciyef.travelguideapp.ui.view.fragment.home
+package com.natiqhaciyef.travelguideapp.ui.view.fragment.carscreen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

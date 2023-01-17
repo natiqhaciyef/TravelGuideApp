@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.view.fragment.home.HomeFragment">
+    tools:context=".ui.view.fragment.homescreen.HomeFragment">
 
     <data>
         <variable
             name="homeFragment"
-            type="com.natiqhaciyef.travelguideapp.ui.view.fragment.home.HomeFragment" />
+            type="com.natiqhaciyef.travelguideapp.ui.view.fragment.homescreen.HomeFragment" />
 
         <variable
             name="adapter"

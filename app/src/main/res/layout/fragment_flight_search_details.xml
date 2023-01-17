@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="hotelFragment"
-            type="com.natiqhaciyef.travelguideapp.ui.view.fragment.hotelscreen.HotelFragment" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.view.fragment.hotelscreen.HotelFragment">
+        tools:context=".ui.view.fragment.flightscreen.FlightSearchDetailsFragment">
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
