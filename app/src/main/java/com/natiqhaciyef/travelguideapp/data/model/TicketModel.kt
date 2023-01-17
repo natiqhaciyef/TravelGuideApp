@@ -1,16 +1,19 @@
 package com.natiqhaciyef.travelguideapp.data.model
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
 data class TicketModel(
     @PrimaryKey(autoGenerate = true)
-    var id: Int,
-    var airlineName: String,
-    var location: String,
-    var price: String,
-    var departureDate: String, // gedis
-    var returnDate: String,    // gelis
-    var passenger: String
+    @ColumnInfo(name = "id") var id: Int,
+    @ColumnInfo(name = "airlineName") var airlineName: String,
+    @ColumnInfo(name = "location") var location: String,
+    @ColumnInfo(name = "destination") var destination: String,
+    @ColumnInfo(name = "price") var price: String,
+    @ColumnInfo(name = "departureDate") var departureDate: String, // gedis
+    @ColumnInfo(name = "returnDate") var returnDate: String,    // gelis
+    @ColumnInfo(name = "passenger") var passenger: String,
+    @ColumnInfo(name = "passengerName") var passengersName: String
 )

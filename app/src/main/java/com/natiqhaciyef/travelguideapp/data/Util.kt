@@ -11,3 +11,27 @@ fun TextView.switchHtmlToXML(resource: Int, context: Context) =
     else
         this.text = Html.fromHtml(context.getString(resource))
 
+fun List<String>.toString(): String {
+    var result = ""
+    this.forEach {
+        result += "$it "
+    }
+    return result
+}
+
+fun String.toCustomList(): List<String> {
+    val list = mutableListOf<String>()
+    val item = this.toMutableList()
+    item.add(' ')
+    var temp = ""
+    for (i in item) {
+        if (i != ' ') {
+            temp += i
+        } else {
+            println(temp)
+            list.add(temp)
+            temp = ""
+        }
+    }
+    return list
+}
