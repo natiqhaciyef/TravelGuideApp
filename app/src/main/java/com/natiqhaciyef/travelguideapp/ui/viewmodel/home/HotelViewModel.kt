@@ -30,11 +30,12 @@ class HotelViewModel @Inject constructor() : ViewModel(){
                     for (doc in docs){
                         val id = doc.get("id") as Int
                         val name = doc.get("hotelName") as String
+                        val image = doc.get("image") as String
                         val dailyPrice = doc.get("dailyPrice") as String
                         val location = doc.get("location") as String
                         val rating = doc.get("rating") as String
 
-                        val hotel = HotelModel(id, name, dailyPrice, location, rating)
+                        val hotel = HotelModel(id, image, name, dailyPrice, location, rating)
                         list.add(hotel)
                     }
                     hotels.value = list
