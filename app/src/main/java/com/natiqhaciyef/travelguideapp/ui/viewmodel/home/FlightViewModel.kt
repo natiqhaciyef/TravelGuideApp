@@ -60,7 +60,6 @@ class FlightViewModel @Inject constructor(
                         val price = doc.get("price") as String
                         val depTime = doc.get("depTime") as String
                         val retTime = doc.get("retTime") as String
-                        val timeline = doc.get("timeline") as String
                         val departureDate = doc.get("departureDate") as String
                         val returnDate = doc.get("returnDate") as String
                         val passenger = doc.get("passenger") as String
@@ -68,7 +67,7 @@ class FlightViewModel @Inject constructor(
 
                         val ticket = TicketModel(
                             id, airlineName, location, destination, price, depTime, retTime,
-                            timeline, departureDate, returnDate, passenger, passengerName
+                            departureDate, returnDate, passenger, passengerName
                         )
                         list.add(ticket)
                     }

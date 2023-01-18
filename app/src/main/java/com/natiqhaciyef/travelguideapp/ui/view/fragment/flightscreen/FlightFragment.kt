@@ -79,15 +79,14 @@ class FlightFragment : Fragment() {
             binding.departureDateTextFlight.text = changeCalendar(calendar)
         }
 
-        binding.departureDateTextFlight.setOnClickListener {
-            DatePickerDialog(
-                requireActivity(),
-                datePicker,
-                calendar.get(Calendar.YEAR),
-                calendar.get(Calendar.MONTH),
-                calendar.get(Calendar.DAY_OF_MONTH),
-            ).show()
-        }
+
+        DatePickerDialog(
+            requireActivity(),
+            datePicker,
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH),
+        ).show()
     }
 
     private fun returnCalendar(calendar: Calendar) {
@@ -98,15 +97,13 @@ class FlightFragment : Fragment() {
             binding.returnDateTextFlight.text = changeCalendar(calendar)
         }
 
-        binding.returnDateTextFlight.setOnClickListener {
-            DatePickerDialog(
-                requireActivity(),
-                datePicker,
-                calendar.get(Calendar.YEAR),
-                calendar.get(Calendar.MONTH),
-                calendar.get(Calendar.DAY_OF_MONTH),
-            ).show()
-        }
+        DatePickerDialog(
+            requireActivity(),
+            datePicker,
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH),
+        ).show()
     }
 
     private fun changeCalendar(calendar: Calendar): String {

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="ticket"
+            type="com.natiqhaciyef.travelguideapp.data.model.TicketModel" />
     </data>
 
 
@@ -60,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="25dp"
-            android:text="12:35 PM"
+            android:text="8:35 PM"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -76,7 +78,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/prompt_bold"
-            android:text="Baku"
+            android:text="@{ticket.location}"
             android:textAlignment="center"
             android:textColor="@color/gray"
             android:textSize="14sp"
@@ -90,7 +92,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/prompt_bold"
-            android:text="Boston"
+            android:text="@{ticket.destination}"
             android:textAlignment="center"
             android:textColor="@color/gray"
             android:textSize="14sp"
@@ -118,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/prompt_medium"
-            android:text="14h 40min"
+            android:text="9h 40min"
             android:textColor="@color/gray"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView7"
@@ -135,7 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:fontFamily="@font/prompt_bold"
-            android:text="Turkish Airlines"
+            android:text="@{ticket.airlineName}"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -152,7 +154,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="35dp"
             android:fontFamily="@font/prompt_bold"
-            android:text="315 $"
+            android:text='@{ticket.price + " $"}'
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
