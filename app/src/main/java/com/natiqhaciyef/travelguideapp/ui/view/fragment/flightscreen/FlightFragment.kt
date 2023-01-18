@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.databinding.FragmentFlightBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,19 +40,31 @@ class FlightFragment : Fragment() {
             val calendar = Calendar.getInstance()
             returnCalendar(calendar)
         }
+
+        binding.searchFlightButton.setOnClickListener {
+            if (
+                binding.locationTextFlight.text.isNotEmpty() &&
+                binding.destinationTextFlight.text.isNotEmpty() &&
+                binding.departureDateTextFlight.text.isNotEmpty() &&
+                binding.returnDateTextFlight.text.isNotEmpty() &&
+                binding.passengerTextFlight.text.isNotEmpty()
+            )
+                Navigation.findNavController(it).navigate(R.id.flightSearchDetailsFragment)
+        }
     }
 
 
-    private fun departureCalendar(calendar: Calendar){
+    private fun departureCalendar(calendar: Calendar) {
         val datePicker = DatePickerDialog.OnDateSetListener { datePicker, year, month, dayOfMonth ->
-            calendar.set(Calendar.YEAR,year)
-            calendar.set(Calendar.MONTH,month)
-            calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth)
+            calendar.set(Calendar.YEAR, year)
+            calendar.set(Calendar.MONTH, month)
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
             binding.departureDateTextFlight.text = changeCalendar(calendar)
         }
 
         binding.departureDateTextFlight.setOnClickListener {
-            DatePickerDialog(requireActivity(),
+            DatePickerDialog(
+                requireActivity(),
                 datePicker,
                 calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),
@@ -60,16 +73,17 @@ class FlightFragment : Fragment() {
         }
     }
 
-    private fun returnCalendar(calendar: Calendar){
+    private fun returnCalendar(calendar: Calendar) {
         val datePicker = DatePickerDialog.OnDateSetListener { datePicker, year, month, dayOfMonth ->
-            calendar.set(Calendar.YEAR,year)
-            calendar.set(Calendar.MONTH,month)
-            calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth)
+            calendar.set(Calendar.YEAR, year)
+            calendar.set(Calendar.MONTH, month)
+            calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
             binding.returnDateTextFlight.text = changeCalendar(calendar)
         }
 
         binding.returnDateTextFlight.setOnClickListener {
-            DatePickerDialog(requireActivity(),
+            DatePickerDialog(
+                requireActivity(),
                 datePicker,
                 calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),
