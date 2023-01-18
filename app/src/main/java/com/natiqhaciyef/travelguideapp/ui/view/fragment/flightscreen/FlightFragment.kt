@@ -18,6 +18,7 @@ import java.util.*
 @AndroidEntryPoint
 class FlightFragment : Fragment() {
     private lateinit var binding: FragmentFlightBinding
+    private var oneWatSelected = true
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,6 +51,22 @@ class FlightFragment : Fragment() {
                 binding.passengerTextFlight.text.isNotEmpty()
             )
                 Navigation.findNavController(it).navigate(R.id.flightSearchDetailsFragment)
+        }
+
+        binding.oneWayButton.setOnClickListener {
+            oneWayApplying()
+        }
+
+        binding.oneWayIcon.setOnClickListener {
+            oneWayApplying()
+        }
+
+        binding.reverseTripButton.setOnClickListener {
+            reverseTrip()
+        }
+
+        binding.reverseIcon.setOnClickListener {
+            reverseTrip()
         }
     }
 
@@ -96,5 +113,28 @@ class FlightFragment : Fragment() {
         val format = "dd-MM-yyyy"
         val sdf = SimpleDateFormat(format, Locale.UK)
         return sdf.format(calendar.time)
+    }
+
+    private fun oneWayApplying() {
+        if (oneWatSelected) {
+            binding.returnTitle.visibility = View.GONE
+            binding.returnDateTextFlight.visibility = View.GONE
+            binding.oneWayButton.text = "        Two way"
+            binding.oneWayIcon.setImageResource(R.drawable.two_way_icon)
+            oneWatSelected = !oneWatSelected
+        } else {
+            binding.returnTitle.visibility = View.VISIBLE
+            binding.returnDateTextFlight.visibility = View.VISIBLE
+            binding.oneWayButton.text = "        One way"
+            binding.oneWayIcon.setImageResource(R.drawable.right_arrow_icon)
+            oneWatSelected = !oneWatSelected
+        }
+    }
+
+    private fun reverseTrip() {
+        val location = binding.locationTextFlight.text
+        val destination = binding.destinationTextFlight.text
+        binding.destinationTextFlight.text = location
+        binding.locationTextFlight.text = destination
     }
 }
