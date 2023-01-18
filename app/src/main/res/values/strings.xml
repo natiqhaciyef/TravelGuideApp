@@ -27,5 +27,6 @@
     <string name="destination_text">Destination</string>
     <string name="location_text">Location</string>
     <string name="result_text">Result</string>
+    <string name="hotel_not_founded_text">Hotel not founded!</string>
 
 </resources>

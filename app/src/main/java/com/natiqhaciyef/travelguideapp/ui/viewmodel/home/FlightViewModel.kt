@@ -22,6 +22,7 @@ class FlightViewModel @Inject constructor(
 
     init {
         getAllTicketsFromRoom()
+        getTicketsFromFirebase()
     }
 
     fun addTicket(ticket: TicketModel){
@@ -47,7 +48,7 @@ class FlightViewModel @Inject constructor(
         val list = mutableListOf<TicketModel>()
         val firestore = Firebase.firestore
         viewModelScope.launch(Dispatchers.Main) {
-            firestore.collection("Tickets").addSnapshotListener{ value, error ->
+            firestore.collection("Flights").addSnapshotListener{ value, error ->
                 if (value != null){
                     val docs = value.documents
                     list.clear()
