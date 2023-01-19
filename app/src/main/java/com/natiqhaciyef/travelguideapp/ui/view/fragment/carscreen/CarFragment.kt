@@ -7,13 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.databinding.FragmentCarBinding
+import com.natiqhaciyef.travelguideapp.ui.adapter.CarAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class CarFragment : Fragment() {
     private lateinit var binding: FragmentCarBinding
+    private lateinit var adapter: CarAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,7 +43,8 @@ class CarFragment : Fragment() {
             }
         })
 
-
-
+//        adapter = CarAdapter()
+        binding.carRecyclerView.adapter = adapter
+        binding.carRecyclerView.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
     }
 }

@@ -9,10 +9,12 @@ import com.bumptech.glide.Glide
 import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.data.model.CarModel
 import com.natiqhaciyef.travelguideapp.databinding.RecyclerCarPostBinding
+import com.natiqhaciyef.travelguideapp.ui.behavior.CarClickBehavior
 
 class CarAdapter(val mContext: Context, val list: MutableList<CarModel>) :
     RecyclerView.Adapter<CarAdapter.CarHolder>() {
 
+    private var listener: CarClickBehavior? = null
     inner class CarHolder(val binding: RecyclerCarPostBinding) :
         RecyclerView.ViewHolder(binding.root)
 
@@ -27,7 +29,14 @@ class CarAdapter(val mContext: Context, val list: MutableList<CarModel>) :
         val car = list[position]
 
         view.car = car
-//        Glide.with(mContext).load(car.image).into(view)
+        Glide.with(mContext).load(car.image).into(view.carImageView)
+        holder.itemView.setOnClickListener {
+            listener?.setOnClickListener(car)
+        }
+    }
+
+    fun onClickAction(listener: CarClickBehavior){
+        this.listener = listener
     }
 
     override fun getItemCount(): Int = list.size
