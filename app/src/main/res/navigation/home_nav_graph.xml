@@ -48,9 +48,17 @@
     <fragment
         android:id="@+id/trainFragment"
         android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.trainscreen.TrainFragment"
-        android:label="TrainFragment" />
+        android:label="TrainFragment" >
+        <action
+            android:id="@+id/action_trainFragment_to_trainDetailsFragment"
+            app:destination="@id/trainDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/flightSearchDetailsFragment"
         android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.flightscreen.FlightSearchDetailsFragment"
         android:label="FlightSearchDetailsFragment" />
+    <fragment
+        android:id="@+id/trainDetailsFragment"
+        android:name="com.natiqhaciyef.travelguideapp.ui.view.fragment.trainscreen.TrainDetailsFragment"
+        android:label="TrainDetailsFragment" />
 </navigation>

@@ -9,8 +9,9 @@ import android.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import com.natiqhaciyef.travelguideapp.R
 import com.natiqhaciyef.travelguideapp.databinding.FragmentTrainDetailsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class TrainDetailsFragment : Fragment() {
     private lateinit var binding: FragmentTrainDetailsBinding
 

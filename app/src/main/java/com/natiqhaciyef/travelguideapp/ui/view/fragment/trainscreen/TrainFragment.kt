@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.natiqhaciyef.travelguideapp.R
 import dagger.hilt.android.AndroidEntryPoint
 import com.natiqhaciyef.travelguideapp.databinding.*
@@ -25,5 +26,16 @@ class TrainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.trainFragment = this
+
+        binding.searchTrainButton.setOnClickListener {
+            val location = binding.locationTextTrain.text
+            val destination = binding.destinationTextTrain.text
+            val passenger = binding.passengerTextTrain.text
+            if (location.isNotEmpty() &&
+                destination.isNotEmpty() &&
+                passenger.isNotEmpty()
+            )
+                Navigation.findNavController(it).navigate(R.id.trainDetailsFragment)
+        }
     }
 }

@@ -57,7 +57,7 @@
             />
 
         <EditText
-            android:id="@+id/locationTextFlight"
+            android:id="@+id/locationTextTrain"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginHorizontal="20dp"
@@ -87,10 +87,10 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/locationTextFlight" />
+            app:layout_constraintTop_toBottomOf="@id/locationTextTrain" />
 
         <EditText
-            android:id="@+id/destinationTextFlight"
+            android:id="@+id/destinationTextTrain"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginHorizontal="20dp"
@@ -120,10 +120,10 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/destinationTextFlight" />
+            app:layout_constraintTop_toBottomOf="@+id/destinationTextTrain" />
 
         <EditText
-            android:id="@+id/passengerTextFlight"
+            android:id="@+id/passengerTextTrain"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginHorizontal="20dp"
@@ -142,7 +142,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/searchFlightButton"
+            android:id="@+id/searchTrainButton"
             android:layout_width="160dp"
             android:layout_height="50dp"
             android:background="@drawable/custom_flight_button_bar"
@@ -154,7 +154,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passengerTextFlight"
+            app:layout_constraintTop_toBottomOf="@+id/passengerTextTrain"
             app:layout_constraintVertical_bias="0.529" />
 
 

@@ -28,7 +28,7 @@
             android:outlineAmbientShadowColor="#F4F4F4"
             android:outlineSpotShadowColor="#E1E1E1"
             android:padding="7dp"
-            android:queryHint="Search hotels"
+            android:queryHint="Search train"
             android:queryBackground="@android:color/transparent"
             android:textColorHint="#F58095DD"
             android:textSize="18sp"
