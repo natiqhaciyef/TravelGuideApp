@@ -17,6 +17,6 @@ data class TicketModel(
     @ColumnInfo(name = "retTime") var retTime: String = "",
     @ColumnInfo(name = "departureDate") var departureDate: String, // gedis
     @ColumnInfo(name = "returnDate") var returnDate: String,    // gelis
-    @ColumnInfo(name = "passenger") var passenger: String,
-    @ColumnInfo(name = "passengerName") var passengersName: String
+    @ColumnInfo(name = "passenger") var passenger: String = "",
+    @ColumnInfo(name = "passengerName") var passengersName: String = ""
 ): Serializable
