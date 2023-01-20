@@ -1,5 +1,7 @@
 package com.natiqhaciyef.travelguideapp.data.model
 
+import java.io.Serializable
+
 data class CarModel(
     var id: Int,
     var image: String,
@@ -14,4 +16,4 @@ data class CarModel(
     var country: String,
     var price: String,
     var drive: String
-)
+): Serializable

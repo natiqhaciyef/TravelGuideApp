@@ -3,6 +3,7 @@ package com.natiqhaciyef.travelguideapp.data.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity
 data class TicketModel(
@@ -18,4 +19,4 @@ data class TicketModel(
     @ColumnInfo(name = "returnDate") var returnDate: String,    // gelis
     @ColumnInfo(name = "passenger") var passenger: String,
     @ColumnInfo(name = "passengerName") var passengersName: String
-)
+): Serializable
