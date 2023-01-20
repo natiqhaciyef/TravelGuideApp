@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="ticket"
-            type="com.natiqhaciyef.travelguideapp.data.model.TicketModel" />
+            name="train"
+            type="com.natiqhaciyef.travelguideapp.data.model.TrainModel" />
     </data>
 
 
@@ -39,52 +38,23 @@
             app:layout_constraintVertical_bias="0.6"
             app:srcCompat="@drawable/ticket_central_line" />
 
-        <TextView
-            android:id="@+id/ticketDepTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="25dp"
-            android:text="10:55 AM"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/prompt_bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-
-
-
-        <TextView
-            android:id="@+id/ticketRetTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:text="8:35 PM"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/prompt_bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
 
         <TextView
             android:id="@+id/userLocation"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/prompt_bold"
-            android:text="@{ticket.location}"
+            android:text="@{train.location}"
             android:textAlignment="center"
             android:textColor="@color/gray"
             android:textSize="14sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/stationNumber"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ticketDepTime" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/userDestination"
@@ -92,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/prompt_bold"
-            android:text="@{ticket.destination}"
+            android:text="@{train.destination}"
             android:textAlignment="center"
             android:textColor="@color/gray"
             android:textSize="14sp"
@@ -102,34 +72,31 @@
             app:layout_constraintTop_toTopOf="@+id/userLocation"
             app:layout_constraintVertical_bias="0.0" />
 
+
         <ImageView
             android:id="@+id/icon"
             android:layout_width="20dp"
             android:layout_height="20dp"
             app:layout_constraintBottom_toTopOf="@+id/imageView7"
-            app:layout_constraintEnd_toStartOf="@+id/ticketRetTime"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/ticketDepTime"
+            app:layout_constraintEnd_toEndOf="@+id/stationNumber"
+            app:layout_constraintStart_toStartOf="@+id/stationNumber"
             app:layout_constraintTop_toTopOf="@+id/imageView6"
-            app:layout_constraintVertical_bias="0.15"
-            app:srcCompat="@drawable/plane_image" />
-
+            app:layout_constraintVertical_bias="0.313"
+            app:srcCompat="@drawable/train_icon" />
 
         <TextView
-            android:id="@+id/timeline"
+            android:id="@+id/stationNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/prompt_medium"
-            android:text="9h 40min"
+            android:text="9 station"
             android:textColor="@color/gray"
             android:textSize="15sp"
             app:layout_constraintBottom_toTopOf="@+id/imageView7"
-            app:layout_constraintEnd_toStartOf="@+id/ticketRetTime"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/ticketDepTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/icon"
-            app:layout_constraintVertical_bias="0.1" />
-
+            app:layout_constraintVertical_bias="0.476" />
 
         <TextView
             android:id="@+id/airlinesName"
@@ -137,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:fontFamily="@font/prompt_bold"
-            android:text="@{ticket.airlineName}"
+            android:text="@{train.railwayName}"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -149,12 +116,12 @@
 
 
         <TextView
-            android:id="@+id/ticketPrice"
+            android:id="@+id/trainPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="35dp"
             android:fontFamily="@font/prompt_bold"
-            android:text='@{ticket.price + " $"}'
+            android:text='@{train.price + " $"}'
             android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"

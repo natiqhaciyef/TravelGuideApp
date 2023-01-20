@@ -29,5 +29,6 @@
     <string name="result_text">Result</string>
     <string name="hotel_not_founded_text">Hotel not founded!</string>
     <string name="view_details_text">view details</string>
+    <string name="search_train_text">Search train</string>
 
 </resources>

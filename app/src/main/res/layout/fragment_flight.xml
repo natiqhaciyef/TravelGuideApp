@@ -17,7 +17,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/home_background_reversed"
+            android:background="@drawable/home_background_2"
             tools:context=".ui.view.fragment.flightscreen.FlightFragment">
 
 
